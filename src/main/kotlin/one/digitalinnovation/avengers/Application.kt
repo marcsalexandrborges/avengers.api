@@ -1,4 +1,4 @@
-package one.digitalinnovation.avengers.avengers.api
+package one.digitalinnovation.avengers
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
