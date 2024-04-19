@@ -1,9 +1,9 @@
 package one.digitalinnovation.avengers.application.web.resource.request
 
 import one.digitalinnovation.avengers.domain.avenger.Avenger
-import jakarta.validation.constraints.NotBlank
-import jakarta.validation.constraints.NotEmpty
 import org.wildfly.common.annotation.NotNull
+import javax.validation.constraints.NotBlank
+import javax.validation.constraints.NotEmpty
 
 data class AvengerRequest(
         @field:NotNull

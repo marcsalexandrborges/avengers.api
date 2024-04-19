@@ -1,7 +1,8 @@
 package one.digitalinnovation.avengers.resource.avenger
 
-import jakarta.persistence.*
+
 import one.digitalinnovation.avengers.domain.avenger.Avenger
+import javax.persistence.*
 
 @Entity
 @Table(name = "avenger")

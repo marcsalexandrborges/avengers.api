@@ -1,14 +1,14 @@
 package one.digitalinnovation.avengers.application.web.resource
 
 import java.net.URI
-import jakarta.validation.Valid
+
 import one.digitalinnovation.avengers.application.web.resource.request.AvengerRequest
 import one.digitalinnovation.avengers.application.web.resource.response.AvengerResponse
 import one.digitalinnovation.avengers.domain.avenger.AvengerRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-
+import javax.validation.Valid
 
 
 private const val API_PATH = "/v1/api/avenger"

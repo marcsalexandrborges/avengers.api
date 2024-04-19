@@ -1,0 +1,19 @@
+marcos@marcos-desktop:~/Project/avengers.api/docker$ psql -h localhost -p 25433 -U dio.avenger avengers
+Password for user dio.avenger: 
+psql (14.11 (Ubuntu 14.11-0ubuntu0.22.04.1), server 12.18)
+Type "help" for help.
+
+avengers=# CREATE TABLE avengers (
+    id SERIAL PRIMARY KEY,
+    nick VARCHAR(255) NOT NULL,
+    person VARCHAR(255) NOT NULL,
+    description TEXT,
+    history TEXT
+);
+CREATE TABLE
+avengers=# INSERT INTO avengers (nick, person, description, history) 
+VALUES ('Iron Man', 'Tony Stark', 'Gênio, bilionário, playboy, filantropo', 'Tony Stark é um industrialista genial e inventor que cria uma armadura para salvar sua própria vida e, eventualmente, o mundo como o herói conhecido como Homem de Ferro.');
+INSERT 0 1
+avengers=# SELECT * FROM avengers;
+avengers=# 
+

@@ -3,12 +3,12 @@ services:
   postgres-avenger:
     image: postgres:12-alpine
     environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: avengers
+      POSTGRES_PASSWORD: dio.avenger
+      POSTGRES_USER: dio.avenger
       ALLOW_IP_RANGE: 0.0.0.0/0
     ports:
-      - "25433:5432"
+      - "25432:5432"
     volumes:
       - pdb12:/var/lib/postgresql/data
     networks:
@@ -17,8 +17,8 @@ services:
   pgadmin-avenger:
     image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_DEFAULT_EMAIL: avengers@email.com
+      PGADMIN_DEFAULT_PASSWORD: '123456'
     ports:
       - "5556:80"
     depends_on:
@@ -27,7 +27,8 @@ services:
       - postgres-compose-network
 
 volumes:
-  pdb12:
+  pdb12: {}
+
 networks:
   postgres-compose-network:
     driver: bridge
